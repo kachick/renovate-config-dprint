@@ -1,7 +1,6 @@
 {
   "description": "Sharable config for dprint",
   "extends": [
-    "github>kachick/renovate-config-dprint:plugins",
-    "github>kachick/renovate-config-dprint:asdf"
+    "github>kachick/renovate-config-dprint:plugins"
   ]
 }
