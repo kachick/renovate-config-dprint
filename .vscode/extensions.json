@@ -1,7 +1,9 @@
 {
   "recommendations": [
-    "dprint.dprint",
+    "redhat.vscode-yaml",
     "editorconfig.editorconfig",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "dprint.dprint",
+    "jnoortheen.nix-ide"
   ]
 }
