@@ -25,6 +25,7 @@
               nil
               nixpkgs-fmt
               dprint
+              typos
             ];
           };
       }

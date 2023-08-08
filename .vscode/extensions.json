@@ -2,7 +2,7 @@
   "recommendations": [
     "redhat.vscode-yaml",
     "editorconfig.editorconfig",
-    "streetsidesoftware.code-spell-checker",
+    "tekumara.typos-vscode",
     "dprint.dprint",
     "jnoortheen.nix-ide"
   ]

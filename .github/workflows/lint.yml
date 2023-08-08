@@ -8,7 +8,7 @@ on:
     paths-ignore:
       - 'LICENSE'
 jobs:
-  build:
+  dprint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,3 +16,16 @@ jobs:
         with:
           # Keep same version as used in *.nix
           dprint-version: '0.40.0'
+
+  typos:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Keep same version as used in *.nix
+      - uses: crate-ci/typos@v1.16.2
+        with:
+          files: |
+            .
+            .github
+            .vscode

@@ -13,12 +13,6 @@
       }
     }
   },
-  "cSpell.words": [
-    "cachix",
-    "dprint",
-    "nixos",
-    "nixpkgs"
-  ],
   "json.schemas": [
     {
       "fileMatch": [
