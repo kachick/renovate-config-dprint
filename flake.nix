@@ -26,6 +26,7 @@
               nixpkgs-fmt
               dprint
               typos
+              go-task
             ];
           };
       }
