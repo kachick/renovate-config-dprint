@@ -25,6 +25,6 @@
     "https://plugins.dprint.dev/toml-0.5.4.wasm",
     "https://plugins.dprint.dev/dockerfile-0.3.0.wasm",
     "https://plugins.dprint.dev/sql-0.2.0.wasm",
-    "https://plugins.dprint.dev/prettier-0.19.0.json@f2ca8ddf0a5d7eca344681f54a9280250727324d09475f201fa2584faa2300c5"
+    "https://plugins.dprint.dev/prettier-0.27.0.json@3557a62b4507c55a47d8cde0683195b14d13c41dda66d0f0b0e111aed107e2fe"
   ]
 }
