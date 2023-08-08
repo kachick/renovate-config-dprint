@@ -13,10 +13,10 @@
     "printWidth": 120,
     "singleQuote": true
   },
-  "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,dockerfile,yml}"],
   "excludes": [
     "**/node_modules",
-    "**/*-lock.json"
+    "**/*-lock.json",
+    ".direnv"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.86.1.wasm",
