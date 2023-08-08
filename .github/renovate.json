@@ -4,5 +4,8 @@
     "config:base",
     "local>kachick/renovate-config-dprint"
   ],
-  "labels": ["dependencies", "renovate"]
+  "labels": ["dependencies", "renovate"],
+  "nix": {
+    "enabled": true
+  }
 }
