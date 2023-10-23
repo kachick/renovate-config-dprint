@@ -2,6 +2,7 @@
   "typescript": {
   },
   "json": {
+    "trailingCommas": "never"
   },
   "markdown": {
   },
