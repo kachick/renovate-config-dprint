@@ -20,7 +20,7 @@ jobs:
     if: ${{ github.actor == 'renovate[bot]' }}
     steps:
       - name: Wait other jobs
-        uses: kachick/wait-other-jobs@v2
+        uses: kachick/wait-other-jobs@v3
         timeout-minutes: 10
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
