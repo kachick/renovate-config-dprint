@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # Keep same version as used in *.nix
-      - uses: crate-ci/typos@v1.20.8
+      - uses: crate-ci/typos@v1.20.9
         with:
           files: |
             .
