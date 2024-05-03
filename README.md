@@ -15,7 +15,8 @@
 }
 ```
 
-It targets [dprint official plugins](https://github.com/dprint?q=plugin&type=all&language=&sort=) except WASM based as [dprint-plugin-prettier](https://github.com/kachick/renovate-config-dprint/issues/11).
+Now targets WASM plugins in [dprint official](https://github.com/dprint?q=plugin&type=all&language=&sort=) only.\
+It means to exclude process plugins like [dprint-plugin-prettier](https://github.com/kachick/renovate-config-dprint/issues/11) and [dprint-plugin-exec](https://github.com/dprint/dprint-plugin-exec).
 
 When updating by bot as renovate, I recommend to check the dprint diff in CI.\
 A way is to integrate [dprint/check](https://github.com/dprint/check) in your GitHub Actions.

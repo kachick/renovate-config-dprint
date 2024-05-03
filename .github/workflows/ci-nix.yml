@@ -33,4 +33,4 @@ jobs:
       - run: nix develop --command echo 'This step should be done before any other "nix develop" steps because of measuring Nix build time'
       - run: nix develop --command task deps
       - run: nix develop --command task check
-      # - run: nix run . -- --version
+    # - run: nix run . -- --version

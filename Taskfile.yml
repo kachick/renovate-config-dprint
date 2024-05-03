@@ -13,10 +13,12 @@ tasks:
   fmt:
     cmds:
       - dprint fmt
+      - yamlfmt -formatter retain_line_breaks=true .
       - nixpkgs-fmt ./*.nix
   lint:
     cmds:
       - dprint check
+      - yamlfmt -lint -formatter retain_line_breaks=true .
       - typos . .github .vscode
       - nixpkgs-fmt --check ./*.nix
   deps:
