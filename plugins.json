@@ -4,7 +4,7 @@
     {
       "fileMatch": ["dprint.json"],
       "matchStrings": [
-        "\"https://plugins.dprint.dev/(?<depName>[^/]+)-(?<currentValue>.+?).wasm\""
+        "\"https://plugins.dprint.dev/(?<depName>[^/]+)-(?<currentValue>[^/]+?).wasm\""
       ],
       "depNameTemplate": "dprint/dprint-plugin-{{{depName}}}",
       "datasourceTemplate": "github-releases"
@@ -12,7 +12,7 @@
     {
       "fileMatch": ["dprint.json"],
       "matchStrings": [
-        "\"https://plugins.dprint.dev/(?<depName>[^/]+/[^/]+)-(?<currentValue>.+?).wasm\""
+        "\"https://plugins.dprint.dev/(?<depName>[^/]+/[^/]+)-(?<currentValue>[^/]+?).wasm\""
       ],
       "depNameTemplate": "{{{depName}}}",
       "datasourceTemplate": "github-releases"
