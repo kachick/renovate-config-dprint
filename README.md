@@ -9,7 +9,7 @@
 ```json
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     "github>kachick/renovate-config-dprint#1.0.0"
   ]
 }
