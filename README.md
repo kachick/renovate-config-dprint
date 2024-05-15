@@ -4,7 +4,7 @@
 
 ## Usage
 
-[Renovate sharable config](https://docs.renovatebot.com/config-presets/) for [dprint](https://github.com/dprint/dprint) and the plugins.
+[Renovate sharable config](https://docs.renovatebot.com/config-presets/) for [dprint](https://github.com/dprint/dprint) plugins.
 
 ```json
 {
