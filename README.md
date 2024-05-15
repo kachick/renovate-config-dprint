@@ -10,7 +10,7 @@
 {
   "extends": [
     "config:recommended",
-    "github>kachick/renovate-config-dprint#1.0.0"
+    "github>kachick/renovate-config-dprint#1.1.0"
   ]
 }
 ```
@@ -20,6 +20,16 @@ It means to exclude process plugins like [dprint-plugin-prettier](https://github
 
 When updating by bot as renovate, I recommend to check the dprint diff in CI.\
 A way is to integrate [dprint/check](https://github.com/dprint/check) in your GitHub Actions.
+
+## Targets
+
+The tested plugins are listed in [dprint.json](dprint.json)\
+The summary is as follows.
+
+- Official
+  - typescript, markdown, json etc
+- 3rd-party
+  - g-plane/malva, g-plane/markup_fmt
 
 ## Example
 
