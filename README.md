@@ -10,7 +10,7 @@
 {
   "extends": [
     "config:base",
-    "github>kachick/renovate-config-dprint"
+    "github>kachick/renovate-config-dprint#1.0.0"
   ]
 }
 ```
