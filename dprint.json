@@ -26,7 +26,7 @@
     "https://plugins.dprint.dev/toml-0.6.1.wasm",
     "https://plugins.dprint.dev/dockerfile-0.3.0.wasm",
     "https://plugins.dprint.dev/sql-0.2.0.wasm",
-    "https://plugins.dprint.dev/g-plane/malva-v0.3.1.wasm",
+    "https://plugins.dprint.dev/g-plane/malva-v0.4.0.wasm",
     "https://plugins.dprint.dev/g-plane/markup_fmt-v0.8.0.wasm"
   ]
 }
