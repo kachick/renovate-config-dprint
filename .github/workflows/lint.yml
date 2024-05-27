@@ -9,7 +9,7 @@ on:
       - 'LICENSE'
 jobs:
   dprint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: dprint/check@v2.2
@@ -18,7 +18,7 @@ jobs:
 
   typos:
     timeout-minutes: 15
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: crate-ci/typos@v1.21.0

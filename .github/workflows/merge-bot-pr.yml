@@ -16,7 +16,7 @@ jobs:
   #    - `Require status checks to pass before merging` and specify the status names
   #   Changing in all personal repository is annoy task for me. Even if using terrafform, getting mandatory CI names in each repo is too annoy!
   renovate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: ${{ github.actor == 'renovate[bot]' }}
     steps:
       - name: Wait other jobs
