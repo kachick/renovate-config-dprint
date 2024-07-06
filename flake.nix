@@ -25,7 +25,6 @@
               nil
               nixpkgs-fmt
               dprint
-              yamlfmt
               typos
               go-task
             ];

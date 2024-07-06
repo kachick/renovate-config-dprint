@@ -4,8 +4,6 @@ on: pull_request
 permissions:
   contents: write
   pull-requests: write
-  # checks: read # For private repositories
-  # actions: read # For private repositories
 
 jobs:
   # Avoid `automerge` renovate official feature.

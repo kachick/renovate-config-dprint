@@ -6,6 +6,9 @@
   },
   "markdown": {
   },
+  "yaml": {
+    "quotes": "preferSingle"
+  },
   "toml": {
   },
   "dockerfile": {
