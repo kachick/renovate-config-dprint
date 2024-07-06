@@ -29,7 +29,7 @@ The summary is as follows.
 - Official
   - typescript, markdown, json etc
 - 3rd-party
-  - g-plane/malva, g-plane/markup_fmt
+  - g-plane/malva, g-plane/markup_fmt, g-plane/pretty_yaml
 
 ## Example
 
