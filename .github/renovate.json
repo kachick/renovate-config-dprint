@@ -6,6 +6,9 @@
   ],
   "labels": ["dependencies", "renovate"],
   "nix": {
-    "enabled": true
-  }
+    "enabled": false
+  },
+  "ignoreDeps": [
+    "crate-ci/typos"
+  ]
 }
