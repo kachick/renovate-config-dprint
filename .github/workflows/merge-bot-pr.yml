@@ -27,3 +27,20 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  # https://github.com/kachick/anylang-template/issues/51
+  selfup-runner:
+    timeout-minutes: 30
+    runs-on: ubuntu-24.04
+    if: ${{ github.actor == 'selfup-runner[bot]' }}
+    steps:
+      - name: Wait other jobs
+        uses: kachick/wait-other-jobs@v3
+        with:
+          skip-same-workflow: 'true'
+        timeout-minutes: 20
+      - name: Approve and merge
+        run: gh pr review --approve "$PR_URL" && gh pr merge --auto --delete-branch --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ github.token }}
