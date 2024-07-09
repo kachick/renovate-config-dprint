@@ -15,6 +15,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
+        formatter = pkgs.nixfmt-rfc-style;
         devShells.default = with pkgs;
           mkShell {
             buildInputs = [
@@ -23,7 +24,7 @@
               bashInteractive
 
               nil
-              nixpkgs-fmt
+              nixfmt-rfc-style
               dprint
               typos
               go-task
