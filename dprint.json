@@ -30,7 +30,7 @@
     "https://plugins.dprint.dev/toml-0.6.2.wasm",
     "https://plugins.dprint.dev/dockerfile-0.3.2.wasm",
     "https://plugins.dprint.dev/sql-0.2.0.wasm",
-    "https://plugins.dprint.dev/g-plane/malva-v0.7.1.wasm",
+    "https://plugins.dprint.dev/g-plane/malva-v0.8.0.wasm",
     "https://plugins.dprint.dev/g-plane/markup_fmt-v0.11.0.wasm",
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.4.0.wasm"
   ]
