@@ -6,6 +6,8 @@
 
 [Renovate sharable config](https://docs.renovatebot.com/config-presets/) for [dprint](https://github.com/dprint/dprint) plugins.
 
+Specify tagged versions. The main branch is flaky because of using for behavior testing.
+
 ```json
 {
   "extends": [
