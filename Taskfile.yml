@@ -10,6 +10,8 @@ tasks:
   check:
     deps:
       - task: lint
+    cmds:
+      - renovate-config-validator default.json
   fmt:
     cmds:
       - dprint fmt
