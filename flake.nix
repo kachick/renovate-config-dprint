@@ -31,10 +31,13 @@
                 nixfmt-rfc-style
                 nil
                 go-task
-
                 typos
               ])
-              ++ (with unstables; [ dprint ]);
+              ++ (with unstables; [
+                dprint
+                # Since https://github.com/NixOS/nixpkgs/pull/317764
+                renovate
+              ]);
           };
         }
       );
