@@ -30,3 +30,4 @@ tasks:
       - dprint --version
       - typos --version
       - nixfmt --version
+      - renovate --version
