@@ -2,3 +2,4 @@
 
 # https://github.com/github-linguist/linguist/issues/4848
 default.json linguist-detectable=true
+*.json linguist-language=JSON
