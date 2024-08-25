@@ -3,7 +3,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json"],
+      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
       "matchStrings": [
         "\"https://plugins.dprint.dev/(?<depName>[^/]+)-(?<currentValue>[^/]+?).wasm\""
       ],
@@ -12,7 +12,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json"],
+      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
       "matchStrings": [
         "\"https://plugins.dprint.dev/(?<depName>[^/]+/[^/]+)-(?<currentValue>[^/]+?).wasm\""
       ],
