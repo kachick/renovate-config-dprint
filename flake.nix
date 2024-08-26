@@ -32,6 +32,7 @@
                 nil
                 go-task
                 typos
+                gh
               ])
               ++ (with unstables; [
                 dprint
