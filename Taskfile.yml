@@ -11,7 +11,7 @@ tasks:
     deps:
       - task: lint
     cmds:
-      - renovate-config-validator default.json
+      - renovate-config-validator default.json self.json
   fmt:
     cmds:
       - dprint fmt

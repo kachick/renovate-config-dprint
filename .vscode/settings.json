@@ -17,7 +17,8 @@
     {
       "fileMatch": [
         "renovate.json",
-        "default.json"
+        "default.json",
+        "self.json"
       ],
       "url": "https://docs.renovatebot.com/renovate-schema.json"
     }
