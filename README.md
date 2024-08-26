@@ -13,7 +13,7 @@ And you can optionally use self versioning updater to bump the released versions
 {
   "extends": [
     "config:recommended",
-    "github>kachick/renovate-config-dprint#1.2.0",
+    "github>kachick/renovate-config-dprint#1.3.0",
     "github>kachick/renovate-config-dprint:self"
   ]
 }
@@ -31,8 +31,10 @@ Tested against the following plugins.
 
 - Official
   - typescript, markdown, json etc
-- 3rd-party
-  - g-plane/malva, g-plane/markup_fmt, g-plane/pretty_yaml
+- g-plane
+  - malva, markup_fmt, pretty_yaml, pretty_graphql
+- kachick
+  - kdl
 
 ## Example
 
