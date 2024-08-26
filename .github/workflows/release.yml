@@ -2,8 +2,10 @@ name: 🚀
 on:
   push:
     tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
-  # For existing tags: `gh workflow run '🚀' --ref 'v0.1.0'`
+      - '[0-9]+.[0-9]+.[0-9]+'
+  # Register workflow and the name into GitHub. It makes it possible to be ran from CLI even if not to be merged in default beanch
+  pull_request:
+  # For existing tags: `gh workflow run '🚀' --ref '1.0.0'`
   workflow_dispatch:
 
 jobs:
