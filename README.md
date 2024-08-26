@@ -19,16 +19,15 @@ And you can optionally use self versioning updater to bump the released versions
 }
 ```
 
-Now targets WASM plugins only.\
-It means to exclude process plugins like [dprint-plugin-prettier](https://github.com/kachick/renovate-config-dprint/issues/11) and [dprint-plugin-exec](https://github.com/dprint/dprint-plugin-exec).
+Now, it targets WASM plugins only.\
+This means excluding process plugins like [dprint-plugin-prettier](https://github.com/kachick/renovate-config-dprint/issues/11) and [dprint-plugin-exec](https://github.com/dprint/dprint-plugin-exec).
 
-When updating by bot as renovate, I recommend to check the dprint diff in CI.\
-A way is to integrate [dprint/check](https://github.com/dprint/check) in your GitHub Actions.
+When updating by bot as renovate, I recommend checking the dprint diff in CI.\
+One way is to integrate [dprint/check](https://github.com/dprint/check) into your workflows.
 
 ## Targets
 
-The tested plugins are listed in [dprint.json](dprint.json)\
-The summary is as follows.
+Tested against the following plugins.
 
 - Official
   - typescript, markdown, json etc
