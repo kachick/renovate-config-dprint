@@ -13,7 +13,7 @@ And you can optionally use self versioning updater to bump the released versions
 {
   "extends": [
     "config:recommended",
-    "github>kachick/renovate-config-dprint#1.1.0",
+    "github>kachick/renovate-config-dprint#1.2.0",
     "github>kachick/renovate-config-dprint:self"
   ]
 }
