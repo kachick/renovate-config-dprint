@@ -5,18 +5,27 @@
       "customType": "regex",
       "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
       "matchStrings": [
-        "\"https://plugins.dprint.dev/(?<depName>[^/]+)-(?<currentValue>[^/]+?).wasm\""
+        "\"https://plugins.dprint.dev/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?).wasm\""
       ],
-      "depNameTemplate": "dprint/dprint-plugin-{{{depName}}}",
+      "depNameTemplate": "dprint/dprint-plugin-{{{pluginName}}}",
       "datasourceTemplate": "github-releases"
     },
     {
       "customType": "regex",
       "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
       "matchStrings": [
-        "\"https://plugins.dprint.dev/(?<depName>[^/]+/[^/]+)-(?<currentValue>[^/]+?).wasm\""
+        "\"https://plugins.dprint.dev/(?<user>g-plane)/(?<pluginName>[^/-]+)-(?<currentValue>[^/]+?).wasm\""
       ],
-      "depNameTemplate": "{{{depName}}}",
+      "depNameTemplate": "{{{user}}}/{{{pluginName}}}",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "matchStrings": [
+        "\"https://plugins.dprint.dev/(?<user>kachick)/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?).wasm\""
+      ],
+      "depNameTemplate": "{{{user}}}/dprint-plugin-{{{pluginName}}}",
       "datasourceTemplate": "github-releases"
     }
   ]

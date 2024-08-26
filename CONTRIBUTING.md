@@ -18,3 +18,9 @@ dprint 0.40.0
 It is intentionally keeping in main branch and not to be updated.\
 Because of version 1.1.0 actually did not point to tagged version.
 I will remove it after few months.
+
+## How to write the regex?
+
+Basically you can check in [regex101.com](https://regex101.com/r/162Ui3/1).
+
+Keep in mind that renovatebot has [RE2](https://github.com/google/re2/wiki/Syntax) limitations.
