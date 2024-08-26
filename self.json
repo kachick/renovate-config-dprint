@@ -9,7 +9,7 @@
         "^\\default\\.json5?$"
       ],
       "matchStrings": [
-        "github>kachick/renovate-config-dprint(/[^#]*)?#(?<currentValue>v?[\\d\\.]+)"
+        "github>kachick/renovate-config-dprint([/:]?[^#]*)?#(?<currentValue>v?[\\d\\.]+)"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "kachick/renovate-config-dprint"
