@@ -6,12 +6,13 @@ tasks:
   default:
     deps:
       - task: fmt
-      - task: lint
+      - task: check
   check:
     deps:
       - task: lint
     cmds:
       - renovate-config-validator default.json self.json
+      - deno test --allow-read
   fmt:
     cmds:
       - dprint fmt
@@ -19,6 +20,7 @@ tasks:
   lint:
     cmds:
       - dprint check
+      - deno lint
       - typos . .github .vscode
       # nix fmt doesn't have check: https://github.com/NixOS/nix/issues/6918
       - git ls-files '*.nix' | xargs nixfmt --check
@@ -31,3 +33,4 @@ tasks:
       - typos --version
       - nixfmt --version
       - renovate --version
+      - deno --version
