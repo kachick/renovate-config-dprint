@@ -33,6 +33,8 @@
                 go-task
                 typos
                 gh
+
+                deno
               ])
               ++ (with unstables; [
                 dprint
