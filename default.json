@@ -1,6 +1,11 @@
 {
-  "description": "Sharable config for dprint",
-  "extends": [
-    "github>kachick/renovate-config-dprint:plugins"
+  "description": "Bump dprint official plugins",
+  "regexManagers": [
+    {
+      "fileMatch": ["dprint.json"],
+      "matchStrings": ["\"https://plugins.dprint.dev/(?<depName>.+)-(?<currentValue>.+?).wasm\""],
+      "depNameTemplate": "dprint/dprint-plugin-{{{depName}}}",
+      "datasourceTemplate": "github-releases"
+    }
   ]
 }
