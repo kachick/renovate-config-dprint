@@ -36,7 +36,7 @@
     "https://plugins.dprint.dev/sql-0.2.0.wasm",
     "https://plugins.dprint.dev/g-plane/malva-v0.12.1.wasm",
     "https://plugins.dprint.dev/g-plane/markup_fmt-v0.20.0.wasm",
-    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
+    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.1.wasm",
     "https://plugins.dprint.dev/g-plane/pretty_graphql-v0.2.1.wasm",
     "https://plugins.dprint.dev/kachick/kdl-0.3.1.wasm",
     "https://plugins.dprint.dev/kachick/typstyle-0.3.4.wasm"
