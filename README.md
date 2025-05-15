@@ -6,15 +6,13 @@
 
 [Renovate sharable config](https://docs.renovatebot.com/config-presets/) for [dprint](https://github.com/dprint/dprint) plugins.
 
-Specify [released versions](https://github.com/kachick/renovate-config-dprint/releases). The main branch is flaky because of using for behavior testing.\
-And you can optionally use self versioning updater to bump the released versions.
+Specify [released versions](https://github.com/kachick/renovate-config-dprint/releases). The main branch is flaky because of using for behavior testing.
 
 ```json
 {
   "extends": [
     "config:recommended",
-    "github>kachick/renovate-config-dprint#1.3.0",
-    "github>kachick/renovate-config-dprint:self"
+    "github>kachick/renovate-config-dprint#1.3.0"
   ]
 }
 ```

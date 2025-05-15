@@ -1,5 +1,5 @@
 {
-  "description": "Updater definitions for renovate-config-dprint itself",
+  "description": "[DEPRECATED #371] Just keeping this file for backward compatibility",
   "customManagers": [
     {
       "customType": "regex",
