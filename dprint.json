@@ -39,6 +39,6 @@
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.1.wasm",
     "https://plugins.dprint.dev/g-plane/pretty_graphql-v0.2.1.wasm",
     "https://plugins.dprint.dev/kachick/kdl-0.3.2.wasm",
-    "https://plugins.dprint.dev/kachick/typstyle-0.3.6.wasm"
+    "https://plugins.dprint.dev/kachick/typstyle-0.3.7.wasm"
   ]
 }
