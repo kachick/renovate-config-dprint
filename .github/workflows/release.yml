@@ -16,7 +16,7 @@ jobs:
       # Required to checkout for gh command
       - uses: actions/checkout@v6
       - name: Wait other jobs
-        uses: kachick/wait-other-jobs@v3
+        uses: kachick/wait-other-jobs@v4
         timeout-minutes: 15
       - run: |
           gh release create --verify-tag '${{ inputs.tag }}' --title '${{ inputs.tag }}'
