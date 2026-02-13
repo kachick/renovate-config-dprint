@@ -24,13 +24,3 @@ tasks:
       - typos . .github .vscode
       # nix fmt doesn't have check: https://github.com/NixOS/nix/issues/6918
       - git ls-files '*.nix' | xargs nixfmt --check
-  deps:
-    cmds:
-      - nix --version
-      - nil --version
-      - task --version
-      - dprint --version
-      - typos --version
-      - nixfmt --version
-      - renovate --version
-      - deno --version
