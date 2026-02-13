@@ -21,8 +21,9 @@
         in
         {
           default = pkgs.mkShellNoCC {
-            buildInputs =
-              (with pkgs; [
+            buildInputs = (
+              with pkgs;
+              [
                 bashInteractive
                 findutils # xargs
                 nixfmt
@@ -36,7 +37,8 @@
 
                 dprint
                 renovate
-              ]);
+              ]
+            );
           };
         }
       );
