@@ -17,7 +17,7 @@ jobs:
         # Due to https://github.com/actions/runner/issues/849, we have to use quotes for 'n.0'
         dprint-version: [
           '', # empty means to latest: https://github.com/dprint/check/blob/2f1cf31537886c3bfb05591c031f7744e48ba8a1/action.yml#L8
-          '0.51.1', # selfup {"extract":"\\d[^']+","replacer":["dprint", "--version"], "nth": 2}
+          '0.52.0', # selfup {"extract":"\\d[^']+","replacer":["dprint", "--version"], "nth": 2}
         ]
     steps:
       - uses: actions/checkout@v6
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - uses: 'crate-ci/typos@v1.43.5' # selfup {"extract":"\\d[^']+","replacer":["typos", "--version"], "nth": 2}
+      - uses: 'crate-ci/typos@v1.44.0' # selfup {"extract":"\\d[^']+","replacer":["typos", "--version"], "nth": 2}
         with:
           files: |
             .
