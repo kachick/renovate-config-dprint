@@ -20,7 +20,7 @@ jobs:
           '0.54.0', # selfup {"extract":"\\d[^']+","replacer":["dprint", "--version"], "nth": 2}
         ]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dprint/check@9cb3a2b17a8e606d37aae341e49df3654933fc23 # v2.3
         with:
           dprint-version: '${{ matrix.dprint-version }}'
@@ -34,7 +34,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: 'crate-ci/typos@v1.47.2' # selfup {"extract":"\\d[^']+","replacer":["typos", "--version"], "nth": 2}
         with:
           files: |
