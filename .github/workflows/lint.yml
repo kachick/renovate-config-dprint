@@ -9,7 +9,7 @@ on:
       - 'LICENSE'
 jobs:
   dprint:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     strategy:
       fail-fast: false
       # Syntax https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
@@ -32,7 +32,7 @@ jobs:
 
   typos:
     timeout-minutes: 15
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - uses: 'crate-ci/typos@v1.48.0' # selfup {"extract":"\\d[^']+","replacer":["typos", "--version"], "nth": 2}

@@ -25,7 +25,7 @@ on:
 
 jobs:
   flake:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
@@ -36,7 +36,7 @@ jobs:
             accept-flake-config = true
       - run: nix flake check
   task:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
