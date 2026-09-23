@@ -16,11 +16,8 @@ tasks:
   fmt:
     cmds:
       - dprint fmt
-      - treefmt
   lint:
     cmds:
       - dprint check
       - deno lint
       - typos . .github .vscode
-      # nix fmt doesn't have check: https://github.com/NixOS/nix/issues/6918
-      - git ls-files '*.nix' | xargs nixfmt --check
