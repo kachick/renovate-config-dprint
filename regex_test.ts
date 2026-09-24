@@ -20,6 +20,7 @@ Deno.test("Given URL matches to correct depNameTemplate", async (t) => {
     [`"https://plugins.dprint.dev/kachick/kdl-0.2.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
     [`"https://plugins.dprint.dev/kachick/typstyle-0.1.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
     [`"https://plugins.dprint.dev/kachick/nix-0.1.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
+    [`"https://plugins.dprint.dev/kachick/sh-0.1.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
   ]);
 
   for (const [url, template] of urlToTemplate) {
