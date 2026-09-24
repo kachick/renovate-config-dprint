@@ -22,11 +22,6 @@
   },
   "kdl": {
   },
-  "excludes": [
-    "**/node_modules",
-    "**/*-lock.json",
-    ".direnv"
-  ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.96.1.wasm",
     "https://plugins.dprint.dev/json-0.24.0.wasm",
