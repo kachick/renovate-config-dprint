@@ -40,7 +40,8 @@ Tested against the following plugins.
 
 ## Example
 
-- [Bump plugin](https://github.com/kachick/renovate-config-dprint/pull/1)
+- [https://plugins.dprint.dev/...](https://github.com/kachick/renovate-config-dprint/pull/1)
+- [npm:...](https://github.com/kachick/renovate-config-dprint/pull/572)
 
 ## Note
 
