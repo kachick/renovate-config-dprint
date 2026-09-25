@@ -4,6 +4,7 @@ import { RE2 } from "npm:re2-wasm@1.0.2";
 import { assertEquals, assertExists } from "jsr:@std/assert@1";
 
 import renovateDefault from "./default.json" with { type: "json" };
+import renovateSelf from "./self.json" with { type: "json" };
 
 Deno.test("Given URL matches to correct depNameTemplate", async (t) => {
   const urlToTemplate = new Map<string, string>([
@@ -69,6 +70,79 @@ Deno.test("Given npm specifier matches to correct depName and datasource", async
       assertEquals(manager.datasourceTemplate, "npm");
       assertExists(matchedGroups);
       assertEquals(matchedGroups.depName, expectedDepName);
+    });
+  }
+});
+
+Deno.test("self.json managerFilePatterns matches expected config filenames", async (t) => {
+  const patterns = renovateSelf.customManagers[0].managerFilePatterns.map((p) => {
+    return new RE2(p.slice(1, -1), "u");
+  });
+
+  const validFiles = [
+    "renovate.json",
+    "renovate.json5",
+    "renovate.jsonc",
+    ".github/renovate.json",
+    ".github/renovate.json5",
+    ".github/renovate.jsonc",
+    ".gitlab/renovate.json",
+    ".gitlab/renovate.json5",
+    ".gitlab/renovate.jsonc",
+    ".renovaterc",
+    ".renovaterc.json",
+    ".renovaterc.json5",
+    ".renovaterc.jsonc",
+    "default.json",
+    "default.json5",
+    "default.jsonc",
+  ];
+
+  for (const file of validFiles) {
+    await t.step(`valid: ${file}`, () => {
+      const matched = patterns.some((re) => re.exec(file));
+      assertEquals(matched, true);
+    });
+  }
+
+  const invalidFiles = [
+    "renovate.yaml",
+    "renovate.json.bak",
+    "foo/renovate.json",
+    ".github/renovate.yaml",
+    ".renovaterc.yaml",
+    "default.yaml",
+  ];
+
+  for (const file of invalidFiles) {
+    await t.step(`invalid: ${file}`, () => {
+      const matched = patterns.some((re) => re.exec(file));
+      assertEquals(matched, false);
+    });
+  }
+});
+
+Deno.test("self.json matchStrings matches and extracts currentValue", async (t) => {
+  const matchers = renovateSelf.customManagers[0].matchStrings.map((m) => new RE2(m, "u"));
+
+  const cases = [
+    { input: `"github>kachick/renovate-config-dprint#1.4.0"`, expected: "1.4.0" },
+    { input: `"github>kachick/renovate-config-dprint#v1.4.0"`, expected: "v1.4.0" },
+    { input: `"github>kachick/renovate-config-dprint:self#1.4.0"`, expected: "1.4.0" },
+    { input: `"github>kachick/renovate-config-dprint/path#1.4.0"`, expected: "1.4.0" },
+  ];
+
+  for (const { input, expected } of cases) {
+    await t.step(input, () => {
+      let currentValue: string | undefined;
+      for (const re of matchers) {
+        const result = re.exec(input);
+        if (result?.groups?.currentValue) {
+          currentValue = result.groups.currentValue;
+          break;
+        }
+      }
+      assertEquals(currentValue, expected);
     });
   }
 });

@@ -4,9 +4,9 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "/^(\\.(github|gitlab)/)?renovate\\.json5?$/",
-        "/^\\.renovaterc(\\.json5?)?$/",
-        "/^\\default\\.json5?$/"
+        "/^(\\.(github|gitlab)/)?renovate\\.json[5c]?$/",
+        "/^\\.renovaterc(\\.json[5c]?)?$/",
+        "/^default\\.json[5c]?$/"
       ],
       "matchStrings": [
         "github>kachick/renovate-config-dprint([/:]?[^#]*)?#(?<currentValue>v?[\\d\\.]+)"
