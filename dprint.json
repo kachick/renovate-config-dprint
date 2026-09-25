@@ -5,6 +5,7 @@
     "trailingCommas": "never"
   },
   "markdown": {
+    "tags": { "json": "json" }
   },
   "yaml": {
     "quotes": "preferSingle",
