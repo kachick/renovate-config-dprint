@@ -36,6 +36,8 @@ Tested against the following plugins.
   - malva, markup_fmt, pretty_yaml, pretty_graphql
 - kachick
   - kdl, typstyle
+- jakebailey
+  - gofumpt
 
 ## Example
 

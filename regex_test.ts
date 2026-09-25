@@ -48,6 +48,7 @@ Deno.test("Given npm specifier matches to correct depName and datasource", async
     [`"npm:dprint-plugin-markup@0.27.5"`, "dprint-plugin-markup"],
     [`"npm:dprint-plugin-yaml@0.6.0"`, "dprint-plugin-yaml"],
     [`"npm:dprint-plugin-graphql@0.2.3"`, "dprint-plugin-graphql"],
+    [`"npm:@jakebailey/dprint-plugin-gofumpt@0.0.18"`, "@jakebailey/dprint-plugin-gofumpt"],
   ]);
 
   for (const [specifier, expectedDepName] of specifierToDepName) {
