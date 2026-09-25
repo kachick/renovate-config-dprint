@@ -4,9 +4,9 @@
 
 ## Usage
 
-[Renovate sharable config](https://docs.renovatebot.com/config-presets/) for [dprint](https://github.com/dprint/dprint) plugins.
+[Renovate sharable config](https://docs.renovatebot.com/config-presets/) for [dprint](https://github.com/dprint/dprint) WASM plugins.
 
-Specify [released versions](https://github.com/kachick/renovate-config-dprint/releases). The main branch is flaky because of using for behavior testing.
+Specify [released versions](https://github.com/kachick/renovate-config-dprint/releases). The main branch may be unstable because it is used for testing.
 
 ```json
 {
@@ -17,14 +17,13 @@ Specify [released versions](https://github.com/kachick/renovate-config-dprint/re
 }
 ```
 
-Both `https://plugins.dprint.dev/...` and `npm:...` specifiers (introduced in [dprint 0.55](https://dsherret.dev/posts/dprint-0.55/)) are supported.\
+Both `https://plugins.dprint.dev/...` and `npm:...` (introduced in [dprint 0.55](https://dsherret.dev/posts/dprint-0.55/)) specifiers are supported.\
 Note: Renovate updates versions within their existing format. It does not rewrite `https:` URLs to `npm:` specifiers. Please run `dprint config update` to switch to `npm:`.
 
-Now, it targets WASM plugins only.\
-This means excluding process plugins like [dprint-plugin-prettier](https://github.com/kachick/renovate-config-dprint/issues/11) and [dprint-plugin-exec](https://github.com/dprint/dprint-plugin-exec).
+This config only supports WASM plugins. It does not support process plugins like [dprint-plugin-prettier](https://github.com/kachick/renovate-config-dprint/issues/11) and [dprint-plugin-exec](https://github.com/dprint/dprint-plugin-exec).
 
-When updating by bot as renovate, I recommend checking the dprint diff in CI.\
-One way is to integrate [dprint/check](https://github.com/dprint/check) into your workflows.
+When Renovate updates plugins, checking the dprint diff in CI is recommended.\
+One way is to integrate [`dprint/check`](https://github.com/dprint/check) into your workflows.
 
 ## Targets
 
