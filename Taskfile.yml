@@ -11,7 +11,7 @@ tasks:
     deps:
       - task: lint
     cmds:
-      - renovate-config-validator --strict --no-global default.json self.json .github/renovate.json
+      - renovate-config-validator --strict --no-global default.json .github/renovate.json
       - deno test --allow-read
   fmt:
     cmds:

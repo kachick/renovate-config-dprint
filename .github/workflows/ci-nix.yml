@@ -8,7 +8,6 @@ on:
       - 'flake.*'
       - 'Taskfile.yml'
       - '*default.json*'
-      - '*self.json*'
   pull_request:
     paths:
       - '.github/workflows/ci-nix.yml'
@@ -16,7 +15,6 @@ on:
       - 'flake.*'
       - 'Taskfile.yml'
       - '*default.json*'
-      - '*self.json*'
   schedule:
     # Every 10:42 JST
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
