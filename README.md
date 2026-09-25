@@ -12,10 +12,13 @@ Specify [released versions](https://github.com/kachick/renovate-config-dprint/re
 {
   "extends": [
     "config:recommended",
-    "github>kachick/renovate-config-dprint#1.3.0"
+    "github>kachick/renovate-config-dprint#1.4.0"
   ]
 }
 ```
+
+Both `https://plugins.dprint.dev/...` and `npm:...` specifiers (introduced in [dprint 0.55](https://dsherret.dev/posts/dprint-0.55/)) are supported.\
+Note: Renovate updates versions within their existing format. It does not rewrite `https:` URLs to `npm:` specifiers. Please run `dprint config update` to switch to `npm:`.
 
 Now, it targets WASM plugins only.\
 This means excluding process plugins like [dprint-plugin-prettier](https://github.com/kachick/renovate-config-dprint/issues/11) and [dprint-plugin-exec](https://github.com/dprint/dprint-plugin-exec).
@@ -33,6 +36,8 @@ Tested against the following plugins.
   - malva, markup_fmt, pretty_yaml, pretty_graphql
 - kachick
   - kdl, typstyle
+- jakebailey
+  - gofumpt
 
 ## Example
 
