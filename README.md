@@ -34,7 +34,7 @@ Tested against the following plugins.
 - g-plane
   - malva, markup_fmt, pretty_yaml, pretty_graphql
 - kachick
-  - kdl, typstyle
+  - kdl, typstyle, nix, sh
 - jakebailey
   - gofumpt
 
