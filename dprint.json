@@ -37,6 +37,6 @@
     "https://plugins.dprint.dev/kachick/typstyle-0.5.1.wasm",
     "https://plugins.dprint.dev/kachick/nix-0.1.0.wasm",
     "https://plugins.dprint.dev/kachick/sh-0.1.0.wasm",
-    "npm:@jakebailey/dprint-plugin-gofumpt@0.0.17"
+    "npm:@jakebailey/dprint-plugin-gofumpt@0.0.18"
   ]
 }
