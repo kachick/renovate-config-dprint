@@ -3,7 +3,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "managerFilePatterns": ["/dprint.json/", "/dprint.jsonc/", "/.dprint.json/", "/.dprint.jsonc/"],
       "matchStrings": [
         "\"https://plugins\\.dprint\\.dev/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?)\\.wasm\""
       ],
@@ -12,7 +12,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "managerFilePatterns": ["/dprint.json/", "/dprint.jsonc/", "/.dprint.json/", "/.dprint.jsonc/"],
       "matchStrings": [
         "\"https://plugins\\.dprint\\.dev/(?<user>g-plane)/(?<pluginName>[^/-]+)-(?<currentValue>[^/]+?)\\.wasm\""
       ],
@@ -21,7 +21,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "managerFilePatterns": ["/dprint.json/", "/dprint.jsonc/", "/.dprint.json/", "/.dprint.jsonc/"],
       "matchStrings": [
         "\"https://plugins\\.dprint\\.dev/(?<user>kachick)/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?)\\.wasm\""
       ],
@@ -30,7 +30,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "managerFilePatterns": ["/dprint.json/", "/dprint.jsonc/", "/.dprint.json/", "/.dprint.jsonc/"],
       "matchStrings": [
         "\"npm:(?<depName>@?[^@\"]+)@(?<currentValue>[^\"]+)\""
       ],
