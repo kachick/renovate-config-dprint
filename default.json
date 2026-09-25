@@ -27,6 +27,14 @@
       ],
       "depNameTemplate": "{{{user}}}/dprint-plugin-{{{pluginName}}}",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "matchStrings": [
+        "\"npm:(?<depName>@?[^@\"]+)@(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "npm"
     }
   ]
 }

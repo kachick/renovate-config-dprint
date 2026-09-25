@@ -36,3 +36,38 @@ Deno.test("Given URL matches to correct depNameTemplate", async (t) => {
     });
   }
 });
+
+Deno.test("Given npm specifier matches to correct depName and datasource", async (t) => {
+  const specifierToDepName = new Map<string, string>([
+    [`"npm:@dprint/typescript@0.96.1"`, "@dprint/typescript"],
+    [`"npm:@dprint/json@0.24.0"`, "@dprint/json"],
+    [`"npm:@dprint/markdown@0.24.0"`, "@dprint/markdown"],
+    [`"npm:@dprint/toml@0.8.0"`, "@dprint/toml"],
+    [`"npm:@dprint/dockerfile@0.6.0"`, "@dprint/dockerfile"],
+    [`"npm:dprint-plugin-malva@0.16.0"`, "dprint-plugin-malva"],
+    [`"npm:dprint-plugin-markup@0.27.5"`, "dprint-plugin-markup"],
+    [`"npm:dprint-plugin-yaml@0.6.0"`, "dprint-plugin-yaml"],
+    [`"npm:dprint-plugin-graphql@0.2.3"`, "dprint-plugin-graphql"],
+  ]);
+
+  for (const [specifier, expectedDepName] of specifierToDepName) {
+    await t.step(specifier, () => {
+      let matchedGroups: Record<string, string> | undefined;
+      const manager = renovateDefault.customManagers.find((cm) =>
+        cm.matchStrings.some((matcher) => {
+          const re2 = new RE2(matcher, "u");
+          const result = re2.exec(specifier);
+          if (result?.groups) {
+            matchedGroups = result.groups;
+            return true;
+          }
+          return false;
+        })
+      );
+      assertExists(manager);
+      assertEquals(manager.datasourceTemplate, "npm");
+      assertExists(matchedGroups);
+      assertEquals(matchedGroups.depName, expectedDepName);
+    });
+  }
+});
