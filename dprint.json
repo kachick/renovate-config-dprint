@@ -26,7 +26,7 @@
   "plugins": [
     "npm:@dprint/typescript@0.96.1",
     "npm:@dprint/json@0.25.1",
-    "npm:@dprint/markdown@0.25.0",
+    "npm:@dprint/markdown@0.26.0",
     "npm:@dprint/toml@0.8.0",
     "npm:@dprint/dockerfile@0.6.0",
     "https://plugins.dprint.dev/sql-0.3.0.wasm",
