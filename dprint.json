@@ -28,7 +28,7 @@
     "npm:@dprint/json@0.25.2",
     "npm:@dprint/markdown@0.26.0",
     "npm:@dprint/toml@0.8.0",
-    "npm:@dprint/dockerfile@0.6.0",
+    "npm:@dprint/dockerfile@0.7.0",
     "https://plugins.dprint.dev/sql-0.3.0.wasm",
     "npm:dprint-plugin-malva@0.16.0",
     "npm:dprint-plugin-markup@0.27.5",
