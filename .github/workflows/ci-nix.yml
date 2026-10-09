@@ -10,6 +10,7 @@ on:
       - '*default.json*'
       - 'package*.json'
       - 'regex_test.ts'
+      - '.oxlintrc.json'
   pull_request:
     paths:
       - '.github/workflows/ci-nix.yml'
@@ -19,6 +20,7 @@ on:
       - '*default.json*'
       - 'package*.json'
       - 'regex_test.ts'
+      - '.oxlintrc.json'
   schedule:
     # Every 10:42 JST
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule

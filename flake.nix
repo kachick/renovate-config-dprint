@@ -47,6 +47,7 @@
                 gh
 
                 nodejs
+                oxlint
 
                 dprint
                 renovate

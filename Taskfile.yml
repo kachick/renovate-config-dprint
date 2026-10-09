@@ -19,4 +19,5 @@ tasks:
   lint:
     cmds:
       - dprint check
+      - oxlint -c .oxlintrc.json --deny-warnings
       - typos . .github .vscode
