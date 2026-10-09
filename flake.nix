@@ -46,7 +46,8 @@
                 typos
                 gh
 
-                deno
+                nodejs
+                oxlint
 
                 dprint
                 renovate
