@@ -46,7 +46,7 @@
                 typos
                 gh
 
-                deno
+                nodejs
 
                 dprint
                 renovate

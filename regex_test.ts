@@ -1,11 +1,14 @@
-// https://github.com/google/re2-wasm is not updated in this few years, however it is easy to be used than node-re2 in deno
-import { RE2 } from "npm:re2-wasm@1.0.2";
+// Test with node-re2 and Node.js built-in test runner to match Renovate's real runtime.
+// Renovate executes on Node.js and uses uhop/node-re2 as its default regex engine:
+// https://github.com/renovatebot/renovate/blob/main/lib/util/regex.ts
+import assert from "node:assert/strict";
+import test from "node:test";
 
-import { assertEquals, assertExists } from "jsr:@std/assert@1";
+import RE2 from "re2";
 
 import renovateDefault from "./default.json" with { type: "json" };
 
-Deno.test("Given URL matches to correct depNameTemplate", async (t) => {
+test("Given URL matches to correct depNameTemplate", async (t) => {
   const urlToTemplate = new Map<string, string>([
     [`"https://plugins.dprint.dev/typescript-0.91.6.wasm"`, "dprint/dprint-plugin-{{{pluginName}}}"],
     [`"https://plugins.dprint.dev/json-0.19.3.wasm"`, "dprint/dprint-plugin-{{{pluginName}}}"],
@@ -24,20 +27,20 @@ Deno.test("Given URL matches to correct depNameTemplate", async (t) => {
   ]);
 
   for (const [url, template] of urlToTemplate) {
-    await t.step(url, () => {
+    await t.test(url, () => {
       const manager = renovateDefault.customManagers.find((cm) =>
         cm.matchStrings.some((matcher) => {
           const re2 = new RE2(matcher, "u");
           return re2.exec(url);
         })
       );
-      assertExists(manager);
-      assertEquals(manager.depNameTemplate, template);
+      assert.ok(manager);
+      assert.strictEqual(manager.depNameTemplate, template);
     });
   }
 });
 
-Deno.test("Given npm specifier matches to correct depName and datasource", async (t) => {
+test("Given npm specifier matches to correct depName and datasource", async (t) => {
   const specifierToDepName = new Map<string, string>([
     [`"npm:@dprint/typescript@0.96.1"`, "@dprint/typescript"],
     [`"npm:@dprint/json@0.24.0"`, "@dprint/json"],
@@ -52,23 +55,23 @@ Deno.test("Given npm specifier matches to correct depName and datasource", async
   ]);
 
   for (const [specifier, expectedDepName] of specifierToDepName) {
-    await t.step(specifier, () => {
+    await t.test(specifier, () => {
       let matchedGroups: Record<string, string> | undefined;
       const manager = renovateDefault.customManagers.find((cm) =>
         cm.matchStrings.some((matcher) => {
           const re2 = new RE2(matcher, "u");
           const result = re2.exec(specifier);
           if (result?.groups) {
-            matchedGroups = result.groups;
+            matchedGroups = result.groups as Record<string, string>;
             return true;
           }
           return false;
         })
       );
-      assertExists(manager);
-      assertEquals(manager.datasourceTemplate, "npm");
-      assertExists(matchedGroups);
-      assertEquals(matchedGroups.depName, expectedDepName);
+      assert.ok(manager);
+      assert.strictEqual(manager.datasourceTemplate, "npm");
+      assert.ok(matchedGroups);
+      assert.strictEqual(matchedGroups.depName, expectedDepName);
     });
   }
 });

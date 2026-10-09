@@ -13,6 +13,16 @@
 dprint 0.40.0
 ```
 
+## Testing
+
+Run tests with `task`:
+
+```console
+> task check
+```
+
+The tests use Node.js and `re2` (`node-re2`). This setup matches the runtime environment and regex engine used by Renovate itself.
+
 ## How to write the regex?
 
 Basically you can check in [regex101.com](https://regex101.com/r/162Ui3/1).

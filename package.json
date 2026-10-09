@@ -1,0 +1,11 @@
+{
+  "name": "renovate-config-dprint",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test regex_test.ts"
+  },
+  "devDependencies": {
+    "re2": "^1.27.0"
+  }
+}

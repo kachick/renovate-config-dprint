@@ -12,12 +12,11 @@ tasks:
       - task: lint
     cmds:
       - renovate-config-validator --strict --no-global default.json .github/renovate.json
-      - deno test --allow-read
+      - npm test
   fmt:
     cmds:
       - dprint fmt
   lint:
     cmds:
       - dprint check
-      - deno lint
       - typos . .github .vscode
