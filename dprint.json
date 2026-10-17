@@ -31,7 +31,7 @@
     "npm:@dprint/dockerfile@0.7.0",
     "https://plugins.dprint.dev/sql-0.3.0.wasm",
     "npm:dprint-plugin-malva@0.16.0",
-    "npm:dprint-plugin-markup@0.27.5",
+    "npm:dprint-plugin-markup@0.27.6",
     "npm:dprint-plugin-yaml@0.6.0",
     "npm:dprint-plugin-graphql@0.2.3",
     "npm:@kachick/dprint-plugin-kdl@0.4.2",
