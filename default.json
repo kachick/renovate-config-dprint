@@ -23,15 +23,6 @@
       "customType": "regex",
       "managerFilePatterns": ["/dprint.json/", "/dprint.jsonc/", "/.dprint.json/", "/.dprint.jsonc/"],
       "matchStrings": [
-        "\"https://plugins\\.dprint\\.dev/(?<user>kachick)/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?)\\.wasm\""
-      ],
-      "depNameTemplate": "{{{user}}}/dprint-plugin-{{{pluginName}}}",
-      "datasourceTemplate": "github-releases"
-    },
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/dprint.json/", "/dprint.jsonc/", "/.dprint.json/", "/.dprint.jsonc/"],
-      "matchStrings": [
         "\"npm:(?<depName>@?[^@\"]+)@(?<currentValue>[^\"]+)\""
       ],
       "datasourceTemplate": "npm"

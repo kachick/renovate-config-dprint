@@ -20,10 +20,10 @@ test("Given URL matches to correct depNameTemplate", async (t) => {
     [`"https://plugins.dprint.dev/g-plane/markup_fmt-v0.12.0.wasm"`, "{{{user}}}/{{{pluginName}}}"],
     [`"https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm"`, "{{{user}}}/{{{pluginName}}}"],
     [`"https://plugins.dprint.dev/g-plane/pretty_graphql-v0.2.0.wasm"`, "{{{user}}}/{{{pluginName}}}"],
-    [`"https://plugins.dprint.dev/kachick/kdl-0.2.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
-    [`"https://plugins.dprint.dev/kachick/typstyle-0.1.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
-    [`"https://plugins.dprint.dev/kachick/nix-0.1.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
-    [`"https://plugins.dprint.dev/kachick/sh-0.1.0.wasm"`, "{{{user}}}/dprint-plugin-{{{pluginName}}}"],
+    [`"https://plugins.dprint.dev/kdl-0.4.3.wasm"`, "dprint/dprint-plugin-{{{pluginName}}}"],
+    [`"https://plugins.dprint.dev/typstyle-0.5.3.wasm"`, "dprint/dprint-plugin-{{{pluginName}}}"],
+    [`"https://plugins.dprint.dev/nix-0.1.2.wasm"`, "dprint/dprint-plugin-{{{pluginName}}}"],
+    [`"https://plugins.dprint.dev/sh-0.1.4.wasm"`, "dprint/dprint-plugin-{{{pluginName}}}"],
   ]);
 
   for (const [url, template] of urlToTemplate) {
@@ -51,6 +51,10 @@ test("Given npm specifier matches to correct depName and datasource", async (t) 
     [`"npm:dprint-plugin-markup@0.27.5"`, "dprint-plugin-markup"],
     [`"npm:dprint-plugin-yaml@0.6.0"`, "dprint-plugin-yaml"],
     [`"npm:dprint-plugin-graphql@0.2.3"`, "dprint-plugin-graphql"],
+    [`"npm:@dprint/kdl@0.4.3"`, "@dprint/kdl"],
+    [`"npm:@dprint/typstyle@0.5.3"`, "@dprint/typstyle"],
+    [`"npm:@dprint/nix@0.1.2"`, "@dprint/nix"],
+    [`"npm:@dprint/sh@0.1.4"`, "@dprint/sh"],
     [`"npm:@jakebailey/dprint-plugin-gofumpt@0.0.18"`, "@jakebailey/dprint-plugin-gofumpt"],
   ]);
 

@@ -30,11 +30,9 @@ One way is to integrate [`dprint/check`](https://github.com/dprint/check) into y
 Tested against the following plugins.
 
 - Official
-  - typescript, markdown, json etc
+  - typescript, markdown, json, kdl, typstyle, nix, sh etc
 - g-plane
   - malva, markup_fmt, pretty_yaml, pretty_graphql
-- kachick
-  - kdl, typstyle, nix, sh
 - jakebailey
   - gofumpt
 

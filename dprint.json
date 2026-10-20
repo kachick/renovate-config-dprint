@@ -34,10 +34,10 @@
     "npm:dprint-plugin-markup@0.27.6",
     "npm:dprint-plugin-yaml@0.6.0",
     "npm:dprint-plugin-graphql@0.2.3",
-    "npm:@kachick/dprint-plugin-kdl@0.4.2",
-    "npm:@kachick/dprint-plugin-typstyle@0.5.2",
-    "npm:@kachick/dprint-plugin-nix@0.1.1",
-    "npm:@kachick/dprint-plugin-sh@0.1.3",
+    "npm:@dprint/kdl@0.4.3",
+    "npm:@dprint/typstyle@0.5.3",
+    "npm:@dprint/nix@0.1.2",
+    "npm:@dprint/sh@0.1.4",
     "npm:@jakebailey/dprint-plugin-gofumpt@0.0.19"
   ]
 }
