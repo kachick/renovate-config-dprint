@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    // renovate-config keeps dprint in default.jsonc to reduce API requests across repositories.
+    // It creates no circular loop because default.json does not extend anything.
+    // local>kachick/renovate-config-dprint merges and tests the latest rules in this repository.
+    "github>kachick/renovate-config//presets/default.jsonc",
+    "local>kachick/renovate-config-dprint"
+  ],
+  "labels": ["dependencies", "renovate"],
+  "nix": {
+    "enabled": false
+  }
+}
