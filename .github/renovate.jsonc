@@ -5,6 +5,7 @@
     // It creates no circular loop because default.json does not extend anything.
     // local>kachick/renovate-config-dprint merges and tests the latest rules in this repository.
     "github>kachick/renovate-config//presets/default.jsonc",
+    "github>kachick/renovate-config//presets/npm.jsonc",
     "local>kachick/renovate-config-dprint"
   ],
   "labels": ["dependencies", "renovate"],
