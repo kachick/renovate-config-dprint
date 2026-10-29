@@ -28,7 +28,6 @@
       "datasourceTemplate": "npm"
     }
   ],
-  // Transferred 4 packages to upstream dprint organization in this context: https://github.com/dprint/dprint-plugin-typstyle/issues/364
   "packageRules": [
     {
       "description": "Transferred to upstream dprint org. See https://github.com/dprint/dprint-plugin-typstyle/issues/364",
@@ -52,9 +51,16 @@
       "replacementVersion": "0.1.2"
     },
     {
-      "description": "Transferred to upstream dprint org. See https://github.com/dprint/dprint-plugin-typstyle/issues/364",
+      "description": "Transferred to upstream dprint org and renamed to @dprint/shuck. See https://github.com/dprint/dprint-plugin-typstyle/issues/364 and https://github.com/dprint/plugins/pull/99",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["@kachick/dprint-plugin-sh"],
+      "replacementName": "@dprint/shuck",
+      "replacementVersion": "0.2.2"
+    },
+    {
+      "description": "Renamed to @dprint/shuck. See https://github.com/dprint/plugins/pull/99",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@dprint/sh"],
       "replacementName": "@dprint/shuck",
       "replacementVersion": "0.2.2"
     }

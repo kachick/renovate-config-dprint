@@ -2,15 +2,11 @@
 // Renovate executes on Node.js and uses uhop/node-re2 as its default regex engine:
 // https://github.com/renovatebot/renovate/blob/main/lib/util/regex.ts
 import assert from "node:assert/strict";
-import fs from "node:fs";
 import test from "node:test";
 
 import RE2 from "re2";
 
-// Renovate parses default.json as JSON5/JSONC with comments allowed.
-// Node.js builtin JSON module import does not support comments, so strip line-leading comments before parsing.
-const defaultJsonRaw = fs.readFileSync(new URL("./default.json", import.meta.url), "utf-8");
-const renovateDefault = JSON.parse(defaultJsonRaw.replace(/^\s*\/\/.*$/gm, ""));
+import renovateDefault from "./default.json" with { type: "json" };
 
 test("Given URL matches to correct depNameTemplate", async (t) => {
   const urlToTemplate = new Map<string, string>([
@@ -104,6 +100,11 @@ test("Package rules provide replacement mappings for transferred plugins", () =>
     },
     {
       oldName: "@kachick/dprint-plugin-sh",
+      newName: "@dprint/shuck",
+      version: "0.2.2",
+    },
+    {
+      oldName: "@dprint/sh",
       newName: "@dprint/shuck",
       version: "0.2.2",
     },
