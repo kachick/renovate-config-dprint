@@ -2,11 +2,15 @@
 // Renovate executes on Node.js and uses uhop/node-re2 as its default regex engine:
 // https://github.com/renovatebot/renovate/blob/main/lib/util/regex.ts
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import test from "node:test";
 
 import RE2 from "re2";
 
-import renovateDefault from "./default.json" with { type: "json" };
+// Renovate parses default.json as JSON5/JSONC with comments allowed.
+// Node.js builtin JSON module import does not support comments, so strip line-leading comments before parsing.
+const defaultJsonRaw = fs.readFileSync(new URL("./default.json", import.meta.url), "utf-8");
+const renovateDefault = JSON.parse(defaultJsonRaw.replace(/^\s*\/\/.*$/gm, ""));
 
 test("Given URL matches to correct depNameTemplate", async (t) => {
   const urlToTemplate = new Map<string, string>([
@@ -55,6 +59,7 @@ test("Given npm specifier matches to correct depName and datasource", async (t) 
     [`"npm:@dprint/typstyle@0.5.3"`, "@dprint/typstyle"],
     [`"npm:@dprint/nix@0.1.2"`, "@dprint/nix"],
     [`"npm:@dprint/sh@0.1.4"`, "@dprint/sh"],
+    [`"npm:@dprint/shuck@0.2.2"`, "@dprint/shuck"],
     [`"npm:@jakebailey/dprint-plugin-gofumpt@0.0.18"`, "@jakebailey/dprint-plugin-gofumpt"],
   ]);
 
@@ -77,5 +82,40 @@ test("Given npm specifier matches to correct depName and datasource", async (t) 
       assert.ok(matchedGroups);
       assert.strictEqual(matchedGroups.depName, expectedDepName);
     });
+  }
+});
+
+test("Package rules provide replacement mappings for transferred plugins", () => {
+  const expectedReplacements = [
+    {
+      oldName: "@kachick/dprint-plugin-kdl",
+      newName: "@dprint/kdl",
+      version: "0.4.3",
+    },
+    {
+      oldName: "@kachick/dprint-plugin-typstyle",
+      newName: "@dprint/typstyle",
+      version: "0.5.3",
+    },
+    {
+      oldName: "@kachick/dprint-plugin-nix",
+      newName: "@dprint/nix",
+      version: "0.1.2",
+    },
+    {
+      oldName: "@kachick/dprint-plugin-sh",
+      newName: "@dprint/shuck",
+      version: "0.2.2",
+    },
+  ];
+
+  for (const expected of expectedReplacements) {
+    const rule = renovateDefault.packageRules?.find((r: { matchPackageNames?: string[] }) =>
+      r.matchPackageNames?.includes(expected.oldName)
+    );
+    assert.ok(rule, `Rule for ${expected.oldName} should exist`);
+    assert.deepStrictEqual(rule.matchDatasources, ["npm"]);
+    assert.strictEqual(rule.replacementName, expected.newName);
+    assert.strictEqual(rule.replacementVersion, expected.version);
   }
 });

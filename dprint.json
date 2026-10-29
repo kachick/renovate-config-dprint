@@ -37,7 +37,7 @@
     "npm:@dprint/kdl@0.4.3",
     "npm:@dprint/typstyle@0.5.3",
     "npm:@dprint/nix@0.1.2",
-    "npm:@dprint/sh@0.1.4",
+    "npm:@dprint/shuck@0.2.2",
     "npm:@jakebailey/dprint-plugin-gofumpt@0.0.20"
   ]
 }
