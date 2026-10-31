@@ -1,6 +1,6 @@
 # renovate-config-dprint
 
-[![CI - Nix Status](https://github.com/kachick/renovate-config-dprint/actions/workflows/ci-nix.yml/badge.svg?branch=main)](https://github.com/kachick/renovate-config-dprint/actions/workflows/ci-nix.yml?query=branch%3Amain+)
+[![CI - Nix Status](https://github.com/kachick/renovate-config-dprint/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kachick/renovate-config-dprint/actions/workflows/ci.yml?query=branch%3Amain+)
 
 ## Usage
 
