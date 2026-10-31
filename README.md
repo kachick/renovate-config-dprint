@@ -12,7 +12,7 @@ Specify [released versions](https://github.com/kachick/renovate-config-dprint/re
 {
   "extends": [
     "config:recommended",
-    "github>kachick/renovate-config-dprint#1.4.0"
+    "github>kachick/renovate-config-dprint#1.5.0"
   ]
 }
 ```
@@ -24,6 +24,23 @@ This config only supports WASM plugins. It does not support process plugins like
 
 When Renovate updates plugins, checking the dprint diff in CI is recommended.\
 One way is to integrate [`dprint/check`](https://github.com/dprint/check) into your workflows.
+
+### Customizing Rules
+
+This preset assigns `depType: "dprint-plugin"` to all extracted plugins.\
+To apply package rules specifically to dprint plugins without affecting other regex managers, match on `matchDepTypes`:
+
+```json
+{
+  "packageRules": [
+    {
+      "matchManagers": ["custom.regex"],
+      "matchDepTypes": ["dprint-plugin"],
+      "groupName": "dprint plugins"
+    }
+  ]
+}
+```
 
 ## Targets
 

@@ -120,3 +120,9 @@ test("Package rules provide replacement mappings for transferred plugins", () =>
     assert.strictEqual(rule.replacementVersion, expected.version);
   }
 });
+
+test("All custom managers set depTypeTemplate to dprint-plugin", () => {
+  for (const manager of renovateDefault.customManagers) {
+    assert.strictEqual(manager.depTypeTemplate, "dprint-plugin");
+  }
+});

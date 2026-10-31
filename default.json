@@ -8,7 +8,8 @@
         "\"https://plugins\\.dprint\\.dev/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?)\\.wasm\""
       ],
       "depNameTemplate": "dprint/dprint-plugin-{{{pluginName}}}",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases",
+      "depTypeTemplate": "dprint-plugin"
     },
     {
       "customType": "regex",
@@ -17,7 +18,8 @@
         "\"https://plugins\\.dprint\\.dev/(?<user>g-plane)/(?<pluginName>[^/-]+)-(?<currentValue>[^/]+?)\\.wasm\""
       ],
       "depNameTemplate": "{{{user}}}/{{{pluginName}}}",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases",
+      "depTypeTemplate": "dprint-plugin"
     },
     {
       "customType": "regex",
@@ -25,7 +27,8 @@
       "matchStrings": [
         "\"npm:(?<depName>@?[^@\"]+)@(?<currentValue>[^\"]+)\""
       ],
-      "datasourceTemplate": "npm"
+      "datasourceTemplate": "npm",
+      "depTypeTemplate": "dprint-plugin"
     }
   ],
   "packageRules": [
