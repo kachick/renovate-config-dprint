@@ -6,6 +6,6 @@
     "test": "node --test regex_test.ts"
   },
   "devDependencies": {
-    "re2": "^1.27.0"
+    "re2": "^1.27.1"
   }
 }
